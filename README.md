@@ -35,7 +35,7 @@ Este projeto utiliza variáveis de ambiente necessárias para a conexão com o b
 
 Para criar o banco de dados necessário para este projeto, você pode utilizar o seguinte script SQL:
 
-\```sql
+```sql
 -- Crie um banco de dados chamado "dbfuncionarios"
 CREATE DATABASE IF NOT EXISTS dbfuncionarios
 DEFAULT CHARACTER SET utf8mb4
@@ -52,7 +52,7 @@ CREATE TABLE IF NOT EXISTS funcionarios (
   cpf VARCHAR(14) NOT NULL,
   endereco VARCHAR(200) NOT NULL
 )default char set utf8mb4;
-\```
+```
 
 ## Executando o Projeto
 
