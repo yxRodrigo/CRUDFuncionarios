@@ -8,7 +8,7 @@ Antes de executar o projeto, certifique-se de ter os seguintes pré-requisitos i
 
 - [Visual Studio](https://visualstudio.microsoft.com/): É necessário ter o Visual Studio instalado para compilar e executar o projeto.
 - [MySQL Server](https://dev.mysql.com/downloads/mysql/): Você deve ter um servidor MySQL instalado para armazenar os dados dos funcionários.
-- [OPCIONAL][MySQL Workbench](https://dev.mysql.com/downloads/workbench/): O MySQL Workbench é útil para administrar o banco de dados MySQL.
+- [MySQL Workbench](https://dev.mysql.com/downloads/workbench/): O MySQL Workbench é útil para criar e administrar o banco de dados MySQL utilizado no projeto.
 
 ## Configuração das Variáveis de Ambiente
 
@@ -30,6 +30,28 @@ Este projeto utiliza variáveis de ambiente necessárias para a conexão com o b
 3. Preencha os valores das variáveis com as informações do seu servidor MySQL.
 
 4. Clique em "OK" para salvar as variáveis de ambiente.
+ 
+## Script de Criação do Banco de Dados
+
+Para criar o banco de dados necessário para este projeto, você pode utilizar o seguinte script SQL:
+
+```sql
+-- Crie um banco de dados chamado "dbfuncionarios"
+CREATE DATABASE IF NOT EXISTS dbfuncionarios
+DEFAULT CHARACTER SET utf8mb4
+DEFAULT COLLATE utf8mb4;
+
+-- Use o banco de dados "dbfuncionarios"
+USE dbfuncionarios;
+
+-- Crie uma tabela chamada "funcionarios"
+CREATE TABLE IF NOT EXISTS funcionarios (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nome VARCHAR(100) NOT NULL,
+  email VARCHAR(100) NOT NULL,
+  cpf VARCHAR(14) NOT NULL,
+  endereco VARCHAR(200) NOT NULL
+)default char set utf8mb4;
 
 ## Executando o Projeto
 
